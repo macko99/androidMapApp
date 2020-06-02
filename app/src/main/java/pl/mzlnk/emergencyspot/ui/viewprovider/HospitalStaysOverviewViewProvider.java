@@ -32,6 +32,7 @@ public class HospitalStaysOverviewViewProvider implements ViewProvider<HospitalS
                         fragmentManager
                                 .beginTransaction()
                                 .replace(R.id.a_main_fragment_container, HospitalStayDetailsFragment.newInstance(stay.getId()))
+                                .addToBackStack(null)
                                 .commit();
                     });
 

@@ -2,6 +2,7 @@ package pl.mzlnk.emergencyspot.ui.dialog;
 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.function.BiConsumer;
 
@@ -12,6 +13,8 @@ public class UserSignInDialog extends BaseDialog {
 
     private EditText login, password;
     private NoIconButton submit;
+
+    private TextView newAccount;
 
     private BiConsumer<String, String> onSubmitListener;
 
@@ -25,6 +28,7 @@ public class UserSignInDialog extends BaseDialog {
         this.login = rootView.findViewById(R.id.d_user_sign_in_input_login);
         this.password = rootView.findViewById(R.id.d_user_sign_in_input_password);
         this.submit = rootView.findViewById(R.id.d_user_sign_in_btn_submit);
+        this.newAccount = rootView.findViewById(R.id.d_user_sign_in_btn_new_account);
     }
 
     @Override
@@ -33,6 +37,13 @@ public class UserSignInDialog extends BaseDialog {
             if(this.onSubmitListener != null) {
                 this.onSubmitListener.accept(this.login.getText().toString(), this.password.getText().toString());
             }
+        });
+
+        this.newAccount.setOnClickListener(view -> {
+            UserSignUpDialog dialog = new UserSignUpDialog();
+            dialog.show(getFragmentManager(), "dialog");
+
+            dismissAllowingStateLoss();
         });
     }
 

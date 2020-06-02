@@ -17,8 +17,8 @@
         android:layout_height="50dp"
         android:src="@drawable/d_filter"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp" />
 
 </RelativeLayout>

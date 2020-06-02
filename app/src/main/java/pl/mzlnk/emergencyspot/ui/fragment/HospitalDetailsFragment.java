@@ -64,6 +64,7 @@ public class HospitalDetailsFragment extends BaseNetworkDataReceiverFragment<Hos
             getFragmentManager()
                     .beginTransaction()
                     .replace(R.id.a_main_fragment_container, HospitalWardsOverviewFragment.newInstance(this.hospitalId))
+                    .addToBackStack(null)
                     .commit();
         });
     }

@@ -16,6 +16,7 @@
     <string name="menu_profile">profil</string>
 
     <string name="btn_sign_in">zaloguj się</string>
+    <string name="btn_sign_up">stwórz</string>
     <string name="btn_sign_out">wyloguj się</string>
     <string name="btn_wards_list">lista oddziałów</string>
     <string name="btn_wards_submit_rate">prześlij ocenę</string>

@@ -32,6 +32,7 @@ public class HospitalWardsOverviewViewProvider implements ViewProvider<HospitalW
                         fragmentManager
                                 .beginTransaction()
                                 .replace(R.id.a_main_fragment_container, HospitalWardDetailsFragment.newInstance(hospitalWard.getId()))
+                                .addToBackStack(null)
                                 .commit();
                     });
 

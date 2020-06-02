@@ -32,6 +32,7 @@ public class HospitalsOverviewViewProvider implements ViewProvider<HospitalDto, 
                         fragmentManager
                                 .beginTransaction()
                                 .replace(R.id.a_main_fragment_container, HospitalDetailsFragment.newInstance(hospital.getId()))
+                                .addToBackStack(null)
                                 .commit();
                     });
 
